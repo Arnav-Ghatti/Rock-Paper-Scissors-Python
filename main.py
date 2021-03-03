@@ -19,7 +19,7 @@ def check_result(user, comp):
         result_label.config(text="Computer Wins")
 
 def user_choice(choice):
-    reset.config(state=tk.ENABLE)
+    reset.config(state=tk.NORMAL)
     
     computer_choice = random.choice(["Rock", "Paper", "Scissor"])
     
@@ -33,9 +33,9 @@ def user_choice(choice):
     check_result(choice, computer_choice)
 
 def reset():
-    rock_btn.config(state=tk.ENABLE)
-    paper_btn.config(state=tk.ENABLE)
-    scissor_btn.config(state=tk.ENABLE)
+    rock_btn.config(state=tk.NORMAL)
+    paper_btn.config(state=tk.NORMAL)
+    scissor_btn.config(state=tk.NORMAL)
 
     player_label.config(text="Player")
     comp_label.config(text="Computer")
