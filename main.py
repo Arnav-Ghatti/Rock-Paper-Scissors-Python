@@ -33,6 +33,8 @@ def user_choice(choice):
     check_result(choice, computer_choice)
 
 def reset():
+    reset.config(state=tk.DISABLED)    
+
     rock_btn.config(state=tk.NORMAL)
     paper_btn.config(state=tk.NORMAL)
     scissor_btn.config(state=tk.NORMAL)
@@ -70,7 +72,7 @@ paper_btn.grid(row=0, column=1, pady=5, padx=5)
 scissor_btn = tk.Button(btn_frame, text="Scissor", font=("Helvetica", 11), command=lambda: user_choice("Scissor"))
 scissor_btn.grid(row=0, column=2, pady=5, padx=5)
 
-reset = tk.Button(root, text="Reset", font=("Helvetica", 11), command=reset())
+reset = tk.Button(root, text="Reset", font=("Helvetica", 11), command=reset)
 reset.grid(row=4, column=0, pady=5, padx=5)
 
 reset.config(state=tk.DISABLED)
